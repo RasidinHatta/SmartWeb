@@ -22,8 +22,8 @@ export function Hero() {
   })
 
   return (
-    <section className="relative overflow-hidden bg-brand-darkest min-h-screen flex items-center py-20 sm:py-24">
-      {/* Geometric dot grid using Trust Blue tones */}
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-bg-secondary py-20 text-foreground dark:bg-brand-darkest dark:text-white sm:py-24">
+      {/* Geometric dot grid using brand accent tones */}
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
@@ -41,7 +41,7 @@ export function Hero() {
         <div className="max-w-3xl">
           {/* Eyebrow badge */}
           <motion.div {...fadeUp(0)}>
-            <Badge className="mb-6 border-accent-light/30 bg-brand-accent/20 text-accent-light hover:bg-brand-accent/30">
+            <Badge className="mb-6 border-brand-accent/30 bg-brand-accent/10 text-brand-accent hover:bg-brand-accent/15">
               Malaysia&apos;s Leading HR Automation Platform
             </Badge>
           </motion.div>
@@ -49,7 +49,7 @@ export function Hero() {
           {/* Main headline */}
           <motion.h1
             {...fadeUp(0.1)}
-            className="text-5xl font-bold leading-[1.1] tracking-[-0.02em] text-white sm:text-6xl lg:text-7xl"
+            className="text-5xl font-bold leading-[1.1] tracking-[-0.02em] text-foreground dark:text-white sm:text-6xl lg:text-7xl"
           >
             Integrated Payroll,{" "}
             <span className="text-brand-accent">HRMS &amp; Time Attendance</span>{" "}
@@ -59,7 +59,7 @@ export function Hero() {
           {/* Subheadline */}
           <motion.p
             {...fadeUp(0.2)}
-            className="mt-6 text-lg leading-relaxed text-white/70 sm:text-xl max-w-2xl"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground dark:text-white/70 sm:text-xl"
           >
             Seamlessly sync facial recognition, turnstiles, and shift rostering with
             LHDN-compliant payroll. Trusted by 2,500+ factories, offices, and
@@ -72,7 +72,7 @@ export function Hero() {
             className="mt-6 flex flex-wrap gap-x-6 gap-y-2"
           >
             {trustPoints.map((point) => (
-              <li key={point} className="flex items-center gap-2 text-sm text-white/60">
+              <li key={point} className="flex items-center gap-2 text-sm text-muted-foreground dark:text-white/60">
                 <CheckCircle2 className="size-4 text-brand-accent shrink-0" />
                 {point}
               </li>
@@ -95,7 +95,7 @@ export function Hero() {
             <Button
               render={<Link href="/products" />}
               size="lg"
-              className="border border-white/25 bg-white/8 text-white hover:bg-white/15 h-12 px-6 font-medium backdrop-blur-sm"
+              className="h-12 border border-border bg-bg-primary px-6 font-medium text-foreground shadow-sm hover:bg-bg-surface dark:border-white/25 dark:bg-white/8 dark:text-white dark:hover:bg-white/15"
             >
               Start Your Payroll Automation
             </Button>
@@ -117,10 +117,10 @@ export function Hero() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+              className="rounded-2xl border border-border bg-bg-primary p-5 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:shadow-none"
             >
               <p className="text-2xl font-bold text-brand-accent sm:text-3xl">{stat.value}</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">{stat.label}</p>
+              <p className="mt-1 text-xs text-muted-foreground dark:text-white/50 sm:text-sm">{stat.label}</p>
             </div>
           ))}
         </motion.div>

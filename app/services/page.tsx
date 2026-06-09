@@ -65,7 +65,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Industry Verticals */}
-      <section className="section-padding bg-bg-primary">
+      <section className="bg-bg-primary py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {verticals.map((vertical, i) => {
@@ -90,7 +90,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Capabilities deep dive */}
-      <section className="section-padding border-t border-border bg-bg-secondary">
+      <section className="border-t border-border bg-bg-secondary py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
             eyebrow="Core Capabilities"
@@ -114,13 +114,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-brand-darkest">
+      <section className="bg-bg-secondary py-12 dark:bg-brand-darkest md:py-20">
         <div className="mx-auto max-w-2xl px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground dark:text-white sm:text-4xl">
             Ready to Transform Your Workforce?
           </h2>
           <div className="mt-3 mx-auto h-[3px] w-10 rounded-full bg-brand-accent" />
-          <p className="mt-5 text-white/60 leading-relaxed">
+          <p className="mt-5 text-muted-foreground leading-relaxed dark:text-white/60">
             Speak with our team to find the right combination of products for your industry and
             workforce size.
           </p>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
             </Button>
             <Button
               render={<Link href="/products" />}
-              className="border border-white/25 bg-white/8 text-white hover:bg-white/15 h-11 px-6 font-medium"
+              className="h-11 border border-border bg-bg-primary px-6 font-medium text-foreground hover:bg-bg-surface dark:border-white/25 dark:bg-white/8 dark:text-white dark:hover:bg-white/15"
             >
               View All Products
             </Button>

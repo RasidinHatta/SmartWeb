@@ -24,7 +24,7 @@ const resourceLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/20 bg-brand-darkest dark:bg-bg-secondary">
+    <footer className="border-t border-border bg-bg-secondary dark:bg-bg-secondary">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Main footer grid */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
@@ -36,10 +36,10 @@ export function Footer() {
                 alt="Smart Touch Technology"
                 width={150}
                 height={52}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto dark:brightness-0 dark:invert"
               />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/60 dark:text-muted-foreground max-w-xs">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Malaysia&apos;s complete workforce automation platform — trusted by 2,500+ factories, offices,
               and condominiums since 2004.
             </p>
@@ -57,7 +57,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/60 transition-colors duration-200 hover:border-accent/50 hover:bg-accent/10 hover:text-accent dark:border-border dark:bg-bg-surface dark:text-muted-foreground dark:hover:text-accent"
+                  className="flex size-9 items-center justify-center rounded-lg border border-border bg-bg-primary text-muted-foreground transition-colors duration-200 hover:border-accent/50 hover:bg-accent/10 hover:text-accent dark:bg-bg-surface"
                 >
                   <Icon className="size-4" />
                 </Link>
@@ -67,13 +67,13 @@ export function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-white dark:text-foreground">Solutions</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Solutions</h3>
             <ul className="space-y-2.5">
               {solutionLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 dark:text-muted-foreground transition-colors duration-200 hover:text-accent"
+                    className="text-sm text-muted-foreground transition-colors duration-200 hover:text-accent"
                   >
                     {link.label}
                   </Link>
@@ -84,13 +84,13 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-white dark:text-foreground">Resources</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Resources</h3>
             <ul className="space-y-2.5">
               {resourceLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 dark:text-muted-foreground transition-colors duration-200 hover:text-accent"
+                    className="text-sm text-muted-foreground transition-colors duration-200 hover:text-accent"
                   >
                     {link.label}
                   </Link>
@@ -101,11 +101,11 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-white dark:text-foreground">Contact Us</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
-                <span className="text-sm text-white/60 dark:text-muted-foreground leading-relaxed">
+                <span className="text-sm text-muted-foreground leading-relaxed">
                   {contactInfo.address}
                 </span>
               </li>
@@ -114,7 +114,7 @@ export function Footer() {
                   <Phone className="size-4 shrink-0 text-accent" />
                   <a
                     href={`tel:${phone.replace(/\s/g, "")}`}
-                    className="text-sm text-white/60 dark:text-muted-foreground transition-colors duration-200 hover:text-accent"
+                    className="text-sm text-muted-foreground transition-colors duration-200 hover:text-accent"
                   >
                     {phone}
                   </a>
@@ -124,7 +124,7 @@ export function Footer() {
                 <Mail className="size-4 shrink-0 text-accent" />
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="text-sm text-white/60 dark:text-muted-foreground transition-colors duration-200 hover:text-accent"
+                  className="text-sm text-muted-foreground transition-colors duration-200 hover:text-accent"
                 >
                   {contactInfo.email}
                 </a>
@@ -134,8 +134,8 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 dark:border-border py-6 sm:flex-row">
-          <p className="text-xs text-white/40 dark:text-muted-foreground">
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-border py-6 sm:flex-row">
+          <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Smart Touch Technology Sdn Bhd (638440-D). All rights reserved.
           </p>
           <nav className="flex gap-4" aria-label="Footer navigation">
@@ -143,7 +143,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-white/40 dark:text-muted-foreground transition-colors duration-200 hover:text-accent"
+                className="text-xs text-muted-foreground transition-colors duration-200 hover:text-accent"
               >
                 {link.label}
               </Link>

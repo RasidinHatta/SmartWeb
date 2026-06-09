@@ -7,7 +7,7 @@ export function ClientLogos() {
   const reduced = useReducedMotion()
 
   return (
-    <section className="section-padding border-y border-border bg-bg-primary">
+    <section className="border-y border-border bg-bg-primary py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.p
           initial={reduced ? {} : { opacity: 0 }}

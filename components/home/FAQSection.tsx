@@ -16,7 +16,7 @@ export function FAQSection() {
   const reduced = useReducedMotion()
 
   return (
-    <section className="section-padding bg-bg-secondary">
+    <section className="bg-bg-secondary py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
           {/* Left: header + CTA */}
@@ -55,17 +55,17 @@ export function FAQSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <Accordion multiple={false} className="space-y-2">
+            <Accordion multiple={false} defaultValue={["faq-0"]} className="space-y-3">
               {faqs.map((faq, i) => (
                 <AccordionItem
                   key={i}
                   value={`faq-${i}`}
-                  className="rounded-xl border border-border bg-bg-primary px-5 dark:bg-bg-surface"
+                  className="overflow-hidden rounded-xl border border-border bg-bg-primary shadow-sm transition-colors duration-200 data-open:border-accent/40 dark:bg-bg-surface"
                 >
-                  <AccordionTrigger className="py-4 text-sm font-medium text-left hover:no-underline text-foreground">
+                  <AccordionTrigger className="px-5 py-4 text-left text-sm font-semibold text-foreground hover:bg-bg-surface hover:no-underline dark:hover:bg-bg-primary/40">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-4 text-sm text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-5 pb-4 text-sm leading-relaxed text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

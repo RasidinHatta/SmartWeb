@@ -63,16 +63,16 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       {/* Hero */}
-      <section className="border-b border-white/10 bg-brand-darkest py-20 sm:py-28">
+      <section className="border-b border-border bg-bg-secondary py-20 dark:border-white/10 dark:bg-brand-darkest sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-brand-accent">
               Our Story
             </p>
-            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground dark:text-white sm:text-5xl">
               20+ Years Solving Malaysia&apos;s Real HR Problems
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/60">
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground dark:text-white/60">
               Founded in 2004 by Kenny Choy, Smart Touch Technology began with a mission to
               transform Payroll, Attendance, and Leave processes through smart, scalable technology.
             </p>
@@ -82,11 +82,11 @@ export default function AboutPage() {
             {milestones.map(({ icon: Icon, value, label }) => (
               <div
                 key={label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                className="rounded-2xl border border-border bg-bg-primary p-5 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:shadow-none"
               >
                 <Icon className="mb-2 size-5 text-brand-accent" />
-                <p className="text-2xl font-bold text-white">{value}</p>
-                <p className="mt-0.5 text-xs text-white/50">{label}</p>
+                <p className="text-2xl font-bold text-foreground dark:text-white">{value}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground dark:text-white/50">{label}</p>
               </div>
             ))}
           </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company story */}
-      <section className="section-padding bg-bg-primary">
+      <section className="bg-bg-primary py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
             <div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding border-t border-border bg-bg-secondary">
+      <section className="border-t border-border bg-bg-secondary py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
             eyebrow="Milestones"
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding border-t border-border bg-bg-primary">
+      <section className="border-t border-border bg-bg-primary py-12 md:py-20">
         <div className="mx-auto max-w-2xl px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-foreground">
             Join 2,500+ Malaysian Businesses

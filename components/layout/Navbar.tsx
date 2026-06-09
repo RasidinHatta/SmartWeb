@@ -22,7 +22,10 @@ function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setMounted(true))
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
   if (!mounted) return <div className="size-9" />
 
@@ -68,6 +71,7 @@ export function Navbar() {
             width={140}
             height={48}
             className="h-10 w-auto dark:brightness-0 dark:invert"
+            loading="eager"
             priority
           />
         </Link>
@@ -133,6 +137,7 @@ export function Navbar() {
                     width={120}
                     height={40}
                     className="h-8 w-auto dark:brightness-0 dark:invert"
+                    loading="eager"
                   />
                 </SheetTitle>
               </SheetHeader>
