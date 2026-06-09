@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(pnpm create next-app@latest smartouch --typescript --tailwind --eslint --app --turbopack --no-src-dir 2>&1)",
+      "PowerShell(taskkill /PID 15300 /F 2>&1)",
+      "Bash(pnpm build *)",
+      "Bash(node scripts/remove-bg.mjs)",
+      "Bash(pnpm exec *)",
+      "Bash(Select-String \"sharp\")",
+      "Bash(node -e \"require\\('sharp'\\).version\")",
+      "Bash(pnpm add *)",
+      "PowerShell(@\\(3000, 3001\\) | ForEach-Object { $port = $_; $pids = netstat -ano | Select-String \":$port\\\\s\" | ForEach-Object { \\($_ -split '\\\\s+'\\)[-1] } | Sort-Object -Unique; foreach \\($p in $pids\\) { if \\($p -match '^\\\\d+$' -and $p -ne '0'\\) { taskkill /PID $p /F 2>$null; Write-Host \"Killed PID $p on port $port\" } } })"
+    ]
+  }
+}
