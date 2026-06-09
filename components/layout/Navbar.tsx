@@ -63,7 +63,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src="/logo.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`}
             alt="Smart Touch Technology"
             width={140}
             height={48}
@@ -128,7 +128,7 @@ export function Navbar() {
               <SheetHeader>
                 <SheetTitle className="flex items-center">
                   <Image
-                    src="/logo.png"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`}
                     alt="Smart Touch Technology"
                     width={120}
                     height={40}

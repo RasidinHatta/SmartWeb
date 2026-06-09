@@ -32,7 +32,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex">
               <Image
-                src="/logo.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo.png`}
                 alt="Smart Touch Technology"
                 width={150}
                 height={52}
